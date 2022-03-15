@@ -60,10 +60,34 @@ public class LineComparison
             System.out.println("The lines are not equal");
         System.out.println(" ");
     }
+    //UC3: Comparison of Two Lines based on End Points
+    public void comparisonOfLines()
+    {
+        Double length1 = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        System.out.println("The length of the 1st line is = " + length1);
+
+        Double length2 = Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
+        System.out.println("The length of the 2nd line is = " + length2);
+
+        double size = length1.compareTo(length2);
+
+        if (size > 0)
+        {
+            System.out.println("The line1 is longer than line2");
+        }
+        else if (size < 0)
+        {
+            System.out.println("The line2 is longer than line1");
+        }
+        else
+            System.out.println("Both lines equal");
+        System.out.println(" ");
+    }
     public static void main(String[] args)
     {
 	LineComparison lineComparison = new LineComparison();
     lineComparison.lengthOfLine();
     lineComparison.equalityOfLines();
+    lineComparison.comparisonOfLines();
     }
 }
