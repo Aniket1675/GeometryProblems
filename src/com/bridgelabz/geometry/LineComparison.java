@@ -83,11 +83,32 @@ public class LineComparison
             System.out.println("Both lines equal");
         System.out.println(" ");
     }
+    //UC4: Compare to Method used with Oops
+    public void comparison()
+    {
+        boolean a = false;
+        boolean b = false;
+        boolean EQUAL = (a == b);
+        System.out.println("Lines are Equal : " + EQUAL);
+        double line = compare(a, b);
+        if (line == 1)
+        {
+            System.out.println("line1 is greater than line 2");
+        }
+        else
+            System.out.println("line1 is lesser than line 2");
+            System.out.println(" ");
+    }
+    private static double compare(boolean a, boolean b)
+    {
+        return 0;
+    }
     public static void main(String[] args)
     {
 	LineComparison lineComparison = new LineComparison();
     lineComparison.lengthOfLine();
     lineComparison.equalityOfLines();
     lineComparison.comparisonOfLines();
+    lineComparison.comparison();
     }
 }
